@@ -1,0 +1,223 @@
+{
+  "brand-cards": [
+    {
+      "file": "brand-cards-800.jpg",
+      "w": 800,
+      "h": 1111
+    },
+    {
+      "file": "brand-cards-1600.jpg",
+      "w": 1600,
+      "h": 2223
+    }
+  ],
+  "ember": [
+    {
+      "file": "ember-600.jpg",
+      "w": 600,
+      "h": 600
+    },
+    {
+      "file": "ember-1024.jpg",
+      "w": 1024,
+      "h": 1024
+    }
+  ],
+  "fluted-chrome": [
+    {
+      "file": "fluted-chrome-800.jpg",
+      "w": 800,
+      "h": 450
+    },
+    {
+      "file": "fluted-chrome-1280.jpg",
+      "w": 1280,
+      "h": 720
+    }
+  ],
+  "fluted-glass": [
+    {
+      "file": "fluted-glass-800.jpg",
+      "w": 800,
+      "h": 450
+    },
+    {
+      "file": "fluted-glass-1280.jpg",
+      "w": 1280,
+      "h": 720
+    }
+  ],
+  "glass-oe": [
+    {
+      "file": "glass-oe-600.jpg",
+      "w": 600,
+      "h": 798
+    },
+    {
+      "file": "glass-oe-1015.jpg",
+      "w": 1015,
+      "h": 1350
+    }
+  ],
+  "glass-stones": [
+    {
+      "file": "glass-stones-800.jpg",
+      "w": 800,
+      "h": 450
+    },
+    {
+      "file": "glass-stones-1280.jpg",
+      "w": 1280,
+      "h": 720
+    }
+  ],
+  "glow-pink": [
+    {
+      "file": "glow-pink-960.jpg",
+      "w": 960,
+      "h": 540
+    },
+    {
+      "file": "glow-pink-1920.jpg",
+      "w": 1920,
+      "h": 1080
+    },
+    {
+      "file": "glow-pink-2800.jpg",
+      "w": 2800,
+      "h": 1575
+    }
+  ],
+  "glow-red": [
+    {
+      "file": "glow-red-800.jpg",
+      "w": 800,
+      "h": 800
+    },
+    {
+      "file": "glow-red-1600.jpg",
+      "w": 1600,
+      "h": 1600
+    }
+  ],
+  "gradient-dusk": [
+    {
+      "file": "gradient-dusk-600.jpg",
+      "w": 600,
+      "h": 800
+    },
+    {
+      "file": "gradient-dusk-1125.jpg",
+      "w": 1125,
+      "h": 1500
+    }
+  ],
+  "gradient-ochre": [
+    {
+      "file": "gradient-ochre-600.jpg",
+      "w": 600,
+      "h": 800
+    },
+    {
+      "file": "gradient-ochre-1125.jpg",
+      "w": 1125,
+      "h": 1500
+    }
+  ],
+  "gradient-rose": [
+    {
+      "file": "gradient-rose-600.jpg",
+      "w": 600,
+      "h": 800
+    },
+    {
+      "file": "gradient-rose-1125.jpg",
+      "w": 1125,
+      "h": 1500
+    }
+  ],
+  "logo-sketch": [
+    {
+      "file": "logo-sketch-800.jpg",
+      "w": 800,
+      "h": 600
+    },
+    {
+      "file": "logo-sketch-1600.jpg",
+      "w": 1600,
+      "h": 1200
+    }
+  ],
+  "pulse-poster": [
+    {
+      "file": "pulse-poster-960.jpg",
+      "w": 960,
+      "h": 540
+    },
+    {
+      "file": "pulse-poster-1920.jpg",
+      "w": 1920,
+      "h": 1080
+    }
+  ],
+  "streak-cover": [
+    {
+      "file": "streak-cover-960.jpg",
+      "w": 960,
+      "h": 540
+    },
+    {
+      "file": "streak-cover-1920.jpg",
+      "w": 1920,
+      "h": 1080
+    }
+  ],
+  "texture-acid": [
+    {
+      "file": "texture-acid-800.jpg",
+      "w": 800,
+      "h": 1200
+    },
+    {
+      "file": "texture-acid-1600.jpg",
+      "w": 1600,
+      "h": 2400
+    }
+  ],
+  "texture-concrete": [
+    {
+      "file": "texture-concrete-800.jpg",
+      "w": 800,
+      "h": 1199
+    },
+    {
+      "file": "texture-concrete-1600.jpg",
+      "w": 1600,
+      "h": 2399
+    }
+  ],
+  "texture-crack": [
+    {
+      "file": "texture-crack-960.jpg",
+      "w": 960,
+      "h": 709
+    },
+    {
+      "file": "texture-crack-1920.jpg",
+      "w": 1920,
+      "h": 1418
+    }
+  ],
+  "texture-scratch": [
+    {
+      "file": "texture-scratch-960.jpg",
+      "w": 960,
+      "h": 640
+    },
+    {
+      "file": "texture-scratch-1920.jpg",
+      "w": 1920,
+      "h": 1280
+    }
+  ]
+}
