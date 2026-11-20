@@ -1,5 +1,6 @@
 // All project content. One template (pages/WorkDetail.jsx) renders every entry.
 // `lines`: display title, one array item per line; a segment is a string or [text, className].
+// Each chapter follows one pattern: label, heading, a three-column `trio` block and an optional one-line close.
 // Sections render in order; supported keys: heading, paragraphs, list, block, quote.
 
 export const works = [
@@ -21,60 +22,31 @@ export const works = [
       {
         label: 'The brief',
         heading: 'Not geographic growth for its own sake.',
-        paragraphs: ['The initiative was framed as a deliberate move to test operational robustness, strengthen supply-chain agility, and align the business for long-term international value creation. The U.S. expansion sought to:'],
-        list: { style: 'numbered', items: [
-          'Diversify revenue streams and reduce reliance on the domestic market.',
-          'Enhance global brand visibility and position GlobeWest as an emerging international design authority.',
-          'Validate the scalability of its trade-first model in a highly competitive, design-led economy.',
-          'Build a replicable framework for subsequent global expansions across similar lifestyle-driven markets.',
+        block: { type: 'trio', items: [
+          { title: 'Diversify revenue', text: 'Reduce reliance on the domestic market by building a second engine of growth in the world’s largest premium furniture market.' },
+          { title: 'Build global visibility', text: 'Position GlobeWest as an emerging international design authority, not just a successful Australian brand.' },
+          { title: 'Prove the model scales', text: 'Validate the trade-first model in a competitive, design-led economy and create a replicable framework for future expansions.' },
         ] },
+        paragraphs: ['The move was framed as a deliberate test of operational robustness, supply-chain agility and long-term international value creation.'],
       },
       {
         label: 'The work',
         heading: 'A framework for entry, and the plan to execute it.',
-        paragraphs: [
-          'Phase 01 delivered a Strategic Market Entry Framework for the U.S. It assesses the opportunity size and structure, evaluates macro and regulatory conditions, validates priority metros, and recommends a channel strategy and high-level rollout logic.',
-          'Part 2 converted those findings into an executable Launch & Implementation Plan, setting out the workstreams, sequencing, governance controls and staged investment approach required to open a trade presence in Los Angeles, with Board control maintained through explicit decision gates and measurable proof points.',
-        ],
-        block: { type: 'tiles', items: [
-          'Executive Summary', 'Introduction', 'Background', 'USA Market Context', 'Competitive Landscape',
-          'Macroeconomic Factors', 'Duties & Tariffs', 'Compliance, Standards & Regulations', 'Importing & Logistics',
-          'Market Validation', 'Channel Strategy Evaluation', 'Launch & Implementation Plan', 'Conclusion',
+        block: { type: 'trio', items: [
+          { title: 'Market entry framework', text: 'Opportunity size, competitive landscape, macroeconomic and regulatory conditions, duties, compliance and logistics, distilled into one clear view of the U.S. market.' },
+          { title: 'Validation and channels', text: 'Priority metros validated, with Los Angeles as the entry point, plus a recommended channel strategy, commercial framework and business case.' },
+          { title: 'Launch and implementation plan', text: 'The workstreams, sequencing, governance controls and staged investment needed to open a trade presence in Los Angeles.' },
         ] },
-      },
-      {
-        label: 'Deliverables',
-        heading: 'Clarity on where, how and when.',
-        list: { style: 'arrows', items: [
-          'U.S. market context and strategic analysis',
-          'Regional market validation, with Los Angeles as the entry point',
-          'Channel strategy evaluation and commercial framework',
-          'Business case and financial modelling assumptions',
-          'Execution roadmap with milestone plan',
-          'Third-party partnership and operational recommendations',
-        ] },
+        paragraphs: ['The result: clarity on where, how and when to enter.'],
       },
       { quote: { text: 'The Australian contemporary, indoor–outdoor system brand for the trade.', cite: 'The recommended U.S. positioning' } },
       {
-        label: 'Rollout logic',
-        heading: 'Four metros. One coherent spine.',
-        paragraphs: ['Rather than a diffuse national push, the framework recommends entering through a small number of highly aligned cities, sequenced so that capital deployment stays tied to clear, measurable proof points.'],
-        block: { type: 'route', items: [
-          { name: 'Los Angeles', text: 'Brand and trade anchor' },
-          { name: 'Dallas', text: 'Inland design and logistics hub' },
-          { name: 'Miami', text: 'Coastal-luxury and East Coast extension' },
-          { name: 'Austin', text: 'Inland growth and innovation market' },
-        ] },
-      },
-      {
-        label: 'Governance',
-        heading: 'Investment linked to evidence, not optimism.',
-        paragraphs: ['The launch is managed as a coordinated program, not a single showroom opening. Each step-change in spend is released through a decision gate, supported by an evidence pack.'],
-        list: { style: 'numbered', items: [
-          ['Gate 0', 'Confirm the Los Angeles pathway and approve mobilisation.'],
-          ['Gate 1', 'Approve lease execution and fitout commitment.'],
-          ['Gate 2', 'Approve opening (“Ready-to-Trade”).'],
-          ['Gate 3', 'Approve scale actions on demonstrated adoption and stable service.'],
+        label: 'Rollout and governance',
+        heading: 'Four metros. Investment linked to evidence.',
+        block: { type: 'trio', items: [
+          { title: 'A focused rollout', text: 'Rather than a diffuse national push, entry starts in Los Angeles as the brand and trade anchor, then extends to Dallas, Miami and Austin.' },
+          { title: 'Gated investment', text: 'Every step-change in spend is released through a Board decision gate, from mobilization to lease, opening and scale.' },
+          { title: 'Proof before scale', text: 'Each gate is backed by an evidence pack, so capital stays tied to demonstrated adoption and stable service, not optimism.' },
         ] },
       },
     ],
@@ -112,20 +84,22 @@ export const works = [
       {
         label: 'The gap',
         heading: 'More content, faster, with less consistency than ever.',
-        paragraphs: [
-          'Hundreds of AI tools can now write captions, blog posts, subject lines and ad copy. Each produces content in isolation. None of them know what the others are saying, and none have access to your brand guidelines, your tone of voice or what you posted yesterday.',
-          'AI gave everyone a content engine. Nobody got a quality control system. Nobody got a market intelligence system. Nobody got a way to know what is actually working.',
-        ],
+        block: { type: 'trio', items: [
+          { title: 'Content in isolation', text: 'Hundreds of AI tools now write captions, blog posts, subject lines and ad copy. None of them know what the others are saying.' },
+          { title: 'No brand context', text: 'None have access to your brand guidelines, your tone of voice or what you posted yesterday.' },
+          { title: 'No intelligence layer', text: 'AI gave everyone a content engine. Nobody got quality control, market intelligence or a way to know what is actually working.' },
+        ] },
       },
       { quote: { text: 'AI made content creation easy. Nobody made marketing intelligent.', cite: 'The gap MCOS is built to close' } },
       {
         label: 'The system',
         heading: 'At its core, MCOS is a monitor.',
-        paragraphs: [
-          'It watches everything: your brand, your channels, your competitors, and your results. Because it is watching your brand everywhere, it can catch inconsistencies before they go live. Because it is watching your competitors, it can tell you where you stand and recommend how to respond.',
-          'One system that enforces message consistency, monitors the competitive landscape, and connects marketing to revenue, all running as a continuous loop.',
-        ],
-        block: { type: 'loop', items: ['Listen', 'Create', 'Check', 'Publish', 'Measure', 'Learn'] },
+        block: { type: 'trio', items: [
+          { title: 'Enforces consistency', text: 'It watches your brand across every channel and catches inconsistencies before they go live.' },
+          { title: 'Reads the market', text: 'It watches your competitors, shows where you stand and recommends how to respond.' },
+          { title: 'Connects to revenue', text: 'It watches your results and links marketing activity to the outcomes it drives.' },
+        ] },
+        paragraphs: ['One system, running as a continuous loop: listen, create, check, publish, measure, learn.'],
       },
     ],
     gallery: [
@@ -152,9 +126,8 @@ export const works = [
       {
         label: 'The problem',
         heading: 'Designing a home is still done by hand.',
-        paragraphs: ['Architects are trained to think about how people move through space, how light enters a room, how a building meets the ground. Then most of their time goes on doing the same thing over and over: arranging rooms, checking dimensions, confirming that windows, plumbing and hallways meet code. Not designing. Arranging. Checking. Fixing. Rearranging.'],
         block: { type: 'trio', items: [
-          { title: 'Creative time is lost', text: 'The repetitive work of testing layouts and checking compliance crowds out the design thinking architects were trained for.' },
+          { title: 'Creative time is lost', text: 'Architects spend most of their time arranging rooms, checking dimensions and confirming code compliance, not designing.' },
           { title: 'Architecture cannot scale', text: 'To design more homes, a firm has one option: hire more architects. Output is bottlenecked by human time.' },
           { title: 'Homebuyers have almost no say', text: 'Pick from a handful of pre-designed layouts, or commission a custom design that costs months and tens of thousands of dollars.' },
         ] },
@@ -162,24 +135,20 @@ export const works = [
       {
         label: 'The insight',
         heading: 'Architecture is a system of building blocks.',
-        paragraphs: [
-          'Every home, no matter how custom or complex, is made up of the same fundamental components: kitchens, bedrooms, bathrooms, living rooms, garages, hallways, staircases. These components have rules. A kitchen needs plumbing. A bedroom needs an egress window. A bathroom cannot open directly into a kitchen.',
-          'Today, architects carry all of these rules in their heads and apply them manually, every time. When they get it wrong, it costs weeks of revisions.',
-        ],
+        block: { type: 'trio', items: [
+          { title: 'The same components', text: 'Every home, however custom, is made of the same parts: kitchens, bedrooms, bathrooms, living rooms, garages, hallways and staircases.' },
+          { title: 'Every component has rules', text: 'A kitchen needs plumbing. A bedroom needs an egress window. A bathroom cannot open directly into a kitchen.' },
+          { title: 'The rules live in people’s heads', text: 'Architects apply them manually, every time. When they get it wrong, it costs weeks of revisions.' },
+        ] },
       },
       { quote: { text: 'AI made it easy to generate a picture of a floor plan. Not one that can be built.', cite: 'Why rules come first' } },
       {
         label: 'The system',
         heading: 'Rules first. AI second.',
-        paragraphs: [
-          'Every room component (a packet) is a pre-designed, pre-validated building block that already knows its own rules. When packets are assembled into a floor plan, the system validates every connection in real time.',
-          'On top of that rule system, AI generates options. Every one is already validated. Every one is buildable.',
-        ],
-        list: { style: 'arrows', items: [
-          'Packets: room components that know their own size, adjacency and code requirements',
-          'Real-time validation of every connection as a plan is assembled',
-          'AI-generated layout options, validated before they are shown',
-          'Production-ready output for BIM workflows, including Revit',
+        block: { type: 'trio', items: [
+          { title: 'Packets', text: 'Pre-designed, pre-validated room components that already know their own size, adjacency and code requirements.' },
+          { title: 'Real-time validation', text: 'Every connection is checked as packets are assembled into a floor plan.' },
+          { title: 'AI-generated layouts', text: 'AI generates options on top of the rule system, so every one is buildable and ready for BIM workflows, including Revit.' },
         ] },
       },
     ],

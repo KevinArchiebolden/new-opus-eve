@@ -31,7 +31,7 @@ export const item = {
   show: { opacity: 1, y: 0, transition: { duration: 1, ease: EASE } },
 }
 
-/* Normalises a line into [text, className] segments. */
+/* Normalizes a line into [text, className] segments. */
 const segs = (line) => (typeof line === 'string' ? [[line, '']] : line.map((s) => (typeof s === 'string' ? [s, ''] : s)))
 
 /* Masked line-by-line reveal for display type. lines: string | [text, className][] */

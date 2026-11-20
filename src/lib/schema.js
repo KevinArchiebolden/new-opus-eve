@@ -19,9 +19,9 @@ export const organization = () => ({
   areaServed: ['Australia', 'United States', 'South America', 'Middle East'],
   parentOrganization: { '@type': 'Organization', name: 'Oscurro Group' },
   knowsAbout: [
-    'Business process optimisation', 'Operations audits', 'Tech stack audits', 'Organisational design',
+    'Business process optimization', 'Operations audits', 'Tech stack audits', 'Organizational design',
     'Enterprise workflow automation', 'Systems integration', 'CRM implementation', 'API integration',
-    'Webhook integration', 'Framer website integration', 'Multi-system data synchronisation',
+    'Webhook integration', 'Framer website integration', 'Multi-system data synchronization',
     'Operations dashboards', 'Automated reporting', 'Client onboarding automation', 'Proposal and contract automation',
     'Lead routing', 'Custom internal software', 'Operational architecture', 'Technology strategy', 'Market entry strategy',
   ],

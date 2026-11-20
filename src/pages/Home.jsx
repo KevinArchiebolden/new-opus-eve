@@ -1,18 +1,14 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
-import { AnimatePresence, motion, useScroll, useSpring, useTransform } from 'framer-motion'
+import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
 import { Seo } from '../lib/head'
 import { EASE, introDelay } from '../lib/motion'
 import { Img } from '../components/Img'
 import { Reveal, SplitLines } from '../components/Reveal'
 import { Marquee, Magnetic } from '../components/Effects'
 import { RuleHead, Statement } from '../components/Layout'
-import { WorkCard } from '../components/Work'
-import { works } from '../data/works'
-import { CAPABILITIES, STEPS, AUDIENCES, DEFINITION, hook } from '../data/site'
+import { CAPABILITIES, AUDIENCES, DEFINITION, hook } from '../data/site'
 import { graph, organization, website, webPage } from '../lib/schema'
-
-const useIsoLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect
 
 function Hero() {
   const ref = useRef(null)
@@ -61,7 +57,7 @@ function Hero() {
       </div>
       <motion.div className="wrap" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: delay + 0.6 }}>
         <div className="hero__bar">
-          <span>Optimisation · Efficiency · Growth</span>
+          <span>Optimization · Efficiency · Growth</span>
           <svg className="pulse-line" viewBox="0 0 320 28" aria-hidden="true"><path d="M0 14H118l8-9 9 19 8-10h14l7-14 9 28 8-14h139" /></svg>
           <span>Strategy · Operations · Technology</span>
         </div>
@@ -110,8 +106,8 @@ function Capabilities() {
   const cap = CAPABILITIES[shown]
   return (
     <section className="section section--flush-top" aria-labelledby="cap-title">
-      <Marquee items={CAPABILITIES.map((c) => c.name)} />
-      <div className="wrap" style={{ marginTop: 'var(--section-y)' }}>
+      {/* <Marquee items={CAPABILITIES.map((c) => c.name)} /> */}
+      <div className="wrap">
         <RuleHead label="What we do" num="02" />
         <div className="grid">
           <SplitLines id="cap-title" className="display display--xl capabilities__head" lines={['Behind', [['the scenes', 'outline']]]} />
@@ -144,83 +140,15 @@ function Capabilities() {
   )
 }
 
-/* Horizontal pinned scroll on desktop; stacked on small screens. */
-function Approach() {
-  const sectionRef = useRef(null)
-  const trackRef = useRef(null)
-  const [desktop, setDesktop] = useState(false)
-  const [dist, setDist] = useState(0)
-  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start start', 'end end'] })
-  const x = useTransform(scrollYProgress, (p) => -p * dist)
-  const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30 })
-
-  // 1) decide the mode, 2) once the horizontal layout is applied, measure the travel distance
-  useIsoLayoutEffect(() => {
-    const mq = window.matchMedia('(min-width: 1000px) and (prefers-reduced-motion: no-preference)')
-    const update = () => setDesktop(mq.matches)
-    update()
-    mq.addEventListener('change', update)
-    return () => mq.removeEventListener('change', update)
-  }, [])
-  useIsoLayoutEffect(() => {
-    if (!desktop) { setDist(0); return }
-    const measure = () => trackRef.current && setDist(Math.max(0, trackRef.current.scrollWidth - window.innerWidth))
-    measure()
-    window.addEventListener('resize', measure)
-    return () => window.removeEventListener('resize', measure)
-  }, [desktop])
-
-  const pinned = desktop
-  return (
-    <section ref={sectionRef} className={`approach${pinned ? ' approach--pinned' : ''}`} aria-labelledby="approach-title"
-      style={pinned ? { height: `calc(100vh + ${dist}px)` } : undefined}>
-      <div className="approach__sticky">
-        <div className="approach__bg" aria-hidden="true"><Img name="gradient-dusk" sizes="100vw" /></div>
-        <div className="wrap approach__head"><RuleHead label="How we work" num="03" /></div>
-        <motion.div className="approach__track" ref={trackRef} style={pinned ? { x } : undefined}>
-          <div className="approach__intro">
-            <SplitLines id="approach-title" className="display display--xl" lines={['Pulse', [['before', 'outline']], 'polish']} />
-            <Reveal as="p" className="lead" delay={0.1}>It’s the pulse that fuels all creation and innovation, the critical first step that drives a business or brand forward.</Reveal>
-          </div>
-          {STEPS.map((s, i) => (
-            <Reveal className="step" key={s.title} delay={pinned ? 0 : i * 0.08}>
-              <div className="step__num">{String(i + 1).padStart(2, '0')}</div>
-              <h3 className="display display--md step__title">{s.title}</h3>
-              <p>{s.text}</p>
-            </Reveal>
-          ))}
-        </motion.div>
-        {pinned && <motion.div className="approach__progress" style={{ scaleX: progress }} aria-hidden="true" />}
-      </div>
-    </section>
-  )
-}
-
-function SelectedWork() {
-  return (
-    <section className="section" aria-labelledby="work-title">
-      <div className="wrap">
-        <RuleHead label="Selected work" num="04" />
-        <div className="grid section-head">
-          <SplitLines id="work-title" className="display display--xl" lines={['Complexity,', [['simplified', 'outline']]]} />
-          <Reveal className="section-head__aside"><Link className="link-arrow" to="/work">All work</Link></Reveal>
-        </div>
-        <div className="work-grid">{works.map((w, i) => <WorkCard key={w.slug} work={w} i={i} />)}</div>
-
-      </div>
-    </section>
-  )
-}
-
 function Audience() {
   return (
     <section className="section section--flush-top" aria-labelledby="aud-title">
       <div className="wrap">
-        <RuleHead label="Who we support" num="05" />
+        <RuleHead label="Who we support" num="03" />
         <div className="grid">
           <SplitLines id="aud-title" className="display display--xl audience__title" lines={['Setting up.', 'Scaling up.', [['Cleaning up.', 'accent-pink']]]} />
           <div className="audience__cols">
-            {[['Leaders', AUDIENCES.leaders], ['Organisations', AUDIENCES.organisations]].map(([h, items], c) => (
+            {[['Leaders', AUDIENCES.leaders], ['Organizations', AUDIENCES.organizations]].map(([h, items], c) => (
               <div key={h}>
                 <Reveal as="h3" className="eyebrow">{h}</Reveal>
                 <ul className="tag-list">{items.map((t, i) => <Reveal as="li" key={t} delay={c * 0.1 + i * 0.05}>{t}</Reveal>)}</ul>
@@ -238,15 +166,13 @@ export default function Home() {
     <main id="main">
       <Seo
         title="Opus Eve | Operations, Systems & Workflow Automation Consultancy"
-        description="Opus Eve is a strategy, operations and technology consultancy: business process optimisation, organisational design, workflow automation, CRM and API integration, and custom internal systems for scaling firms across Australia and the USA."
+        description="Opus Eve is a strategy, operations and technology consultancy: business process optimization, organizational design, workflow automation, CRM and API integration, and custom internal systems for scaling firms across Australia and the USA."
         image="pulse-poster-1920.jpg"
         jsonLd={graph(organization(), website(), webPage({ path: '/', title: 'Opus Eve | Operations, Systems & Workflow Automation Consultancy', description: DEFINITION }))}
       />
       <Hero />
       <Essence />
       <Capabilities />
-      <Approach />
-      <SelectedWork />
       <Audience />
       <Statement />
     </main>

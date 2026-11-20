@@ -1,6 +1,6 @@
 import images from '../data/images.json'
 
-// Responsive image from the optimised set in /public/assets/img (see scripts/image-manifest.mjs).
+// Responsive image from the optimized set in /public/assets/img (see scripts/image-manifest.mjs).
 export function Img({ name, alt = '', sizes = '100vw', eager = false, className, style }) {
   const variants = images[name]
   if (!variants) throw new Error(`Unknown image: ${name}`)

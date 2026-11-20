@@ -39,7 +39,7 @@ src/
   lib/                    motion presets, Lenis smooth scroll, head/SEO manager
   styles/main.css         brand design system (Brand Guidelines Feb 2026)
   styles/motion.css       motion-layer styles
-public/assets/            optimised images, hero loop video, Chivo font
+public/assets/            optimized images, hero loop video, Chivo font
 scripts/                  image-manifest.mjs, prerender.mjs (also writes sitemap.xml + robots.txt)
 ```
 
@@ -56,11 +56,11 @@ scripts/                  image-manifest.mjs, prerender.mjs (also writes sitemap
 - Magnetic buttons, custom cursor with "View / Next / Talk" labels (fine pointers only), scroll-progress hairline
 - All motion respects `prefers-reduced-motion` via `MotionConfig reducedMotion="user"`
 
-## AEO / GEO (answer & generative engine optimisation)
+## AEO / GEO (answer & generative engine optimization)
 Target queries: `MainContent/Baseline Query Dataset (45 Queries per brand) - Opus Eve.csv`.
 - **One source of truth:** `src/data/site.js` holds the entity definition, services, clients, engagement model and FAQ. Pages, JSON-LD and `llms.txt` are all generated from it, so they never disagree.
 - **Answer-first content:** the definition sentence (Home), detailed services and engagement model (About), client systems (Work) and a 14-question grouped FAQ (FAQ page, `/faq`). All server-rendered, so it is readable without JavaScript.
-- **Structured data** (`src/lib/schema.js`): one `@graph` per page. Organization (alternate names, knowsAbout, service catalogue, Oscurro Group parent), WebSite, page type, FAQPage, Article per case study, client CreativeWorks, BreadcrumbList.
+- **Structured data** (`src/lib/schema.js`): one `@graph` per page. Organization (alternate names, knowsAbout, service catalog, Oscurro Group parent), WebSite, page type, FAQPage, Article per case study, client CreativeWorks, BreadcrumbList.
 - **Crawler files** (written by `scripts/prerender.mjs`): `llms.txt`, `robots.txt` (explicitly allows AI search crawlers), `sitemap.xml`. 404 is `noindex`.
 - **Check coverage:** `C:\Users\TempKevin\Projects\oe-qa\aeo-check.mjs` reports JSON-LD types per page and term coverage per query.
 - **Needs confirmation before launch:** each client's one-line scope (taken from the query wording), the engagement/retainer and audit-scoping statements, and that every FAQ answer reflects how Opus Eve actually works.
@@ -73,6 +73,6 @@ Target queries: `MainContent/Baseline Query Dataset (45 Queries per brand) - Opu
 | Brand story, mark, philosophy, character, engagement model, regions | About | Regions also in FAQ answer + footer |
 | Case studies, client systems | Work | Home: 3 case-study cards; FAQ: client answer |
 | Questions & answers | FAQ | — |
-| Partner line, enquiry form | Contact | — |
+| Partner line, inquiry form | Contact | — |
 | "We stay out of the spotlight" statement | Home | — (inner pages end with Next steps) |
 Check for regressions: `node C:\Users\TempKevin\Projects\oe-qa\dupe-check.mjs`.
