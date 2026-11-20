@@ -14,10 +14,10 @@ export default function Contact() {
   const [form, setForm] = useState({ name: '', company: '', email: '', topic: '', message: '' })
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }))
 
-  // Static site: compose the enquiry in the visitor's email app.
+  // Static site: compose the inquiry in the visitor's email app.
   const submit = (e) => {
     e.preventDefault()
-    const subject = `Enquiry${form.topic ? `: ${form.topic}` : ''}${form.company ? ` · ${form.company}` : ''}`
+    const subject = `Inquiry${form.topic ? `: ${form.topic}` : ''}${form.company ? ` · ${form.company}` : ''}`
     const body = `${form.message}\n\n${form.name}${form.company ? `, ${form.company}` : ''}\n${form.email}`
     window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   }
@@ -37,14 +37,14 @@ export default function Contact() {
       <section className="page-hero">
         <div className="wrap">
           <RuleHead label="Contact" num="04" />
-          <SplitLines as="h1" animate delay={0.45} className="display display--xxl page-hero__title" lines={['Let’s optimise', ['the ', ['future', 'outline']]]} />
+          <SplitLines as="h1" animate delay={0.45} className="display display--xxl page-hero__title" lines={['Let’s optimize', ['the ', ['future', 'outline']]]} />
         </div>
       </section>
 
       <section className="section section--flush-top">
         <div className="wrap contact__grid">
           <div className="contact__info">
-            <Reveal as="p" className="eyebrow" delay={0.6}>General enquiries</Reveal>
+            <Reveal as="p" className="eyebrow" delay={0.6}>General inquiries</Reveal>
             <Reveal delay={0.7}><a className="contact__email" href={`mailto:${EMAIL}`} data-cursor="Write">{EMAIL}</a></Reveal>
             <Reveal className="contact__block" delay={0.8}>
               <p className="eyebrow">Partnership</p>
@@ -58,7 +58,7 @@ export default function Contact() {
           </div>
 
           <Reveal className="contact__form" delay={0.75} y={60}>
-            <form className="form" onSubmit={submit} aria-label="Compose an enquiry">
+            <form className="form" onSubmit={submit} aria-label="Compose an inquiry">
               <div className="field"><label htmlFor="f-name">Name</label><input id="f-name" autoComplete="name" required value={form.name} onChange={set('name')} /></div>
               <div className="field"><label htmlFor="f-company">Company</label><input id="f-company" autoComplete="organization" value={form.company} onChange={set('company')} /></div>
               <div className="field"><label htmlFor="f-email">Email</label><input id="f-email" type="email" autoComplete="email" required value={form.email} onChange={set('email')} /></div>

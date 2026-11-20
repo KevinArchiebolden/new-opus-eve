@@ -9,24 +9,24 @@ export const REGIONS = ['Australia', 'USA', 'South America', 'Middle East']
 /* One-sentence entity definition — reused verbatim across pages, meta and llms.txt
    so answer engines see a single, consistent description of Opus Eve. */
 export const DEFINITION =
-  'Opus Eve is a B2B strategy, operations and technology consultancy that designs, builds and manages the systems, workflows and organisational structures that help professional services firms, creative agencies, design studios and multi-brand groups scale with confidence.'
+  'Opus Eve is a B2B strategy, operations and technology consultancy that designs, builds and manages the systems, workflows and organizational structures that help professional services firms, creative agencies, design studios and multi-brand groups scale with confidence.'
 
 export const CAPABILITIES = [
   {
-    name: 'Business Optimisation',
-    slug: 'business-optimisation',
+    name: 'Business Optimization',
+    slug: 'business-optimization',
     img: 'glass-oe', alt: 'The Opus Eve monogram in black red, seen through fluted glass',
-    summary: 'Find the friction. Business process optimisation, operations and tech stack audits, and the removal of operational bottlenecks.',
+    summary: 'Find the friction. Business process optimization, operations and tech stack audits, and the removal of operational bottlenecks.',
     services: [
       'Operations and tech stack audits',
-      'Business process mapping and optimisation',
+      'Business process mapping and optimization',
       'Bottleneck and risk analysis across teams and tools',
-      'Tool consolidation and licence rationalisation',
+      'Tool consolidation and license rationalization',
     ],
   },
   {
-    name: 'Organisation Design',
-    slug: 'organisation-design',
+    name: 'Organization Design',
+    slug: 'organization-design',
     img: 'fluted-glass', alt: 'Rows of clear fluted glass fins in black and white',
     summary: 'Structure that scales. Roles, handoffs and operating models for growing firms and multi-brand holding groups.',
     services: [
@@ -50,15 +50,15 @@ export const CAPABILITIES = [
     ],
   },
   {
-    name: 'IT Customisation',
-    slug: 'it-customisation',
+    name: 'IT Customization',
+    slug: 'it-customization',
     img: 'fluted-chrome', alt: 'Chrome and glass fins catching light in a repeating rhythm',
-    summary: 'Connect the stack. CRM implementation, custom API and webhook integrations, and multi-system data synchronisation.',
+    summary: 'Connect the stack. CRM implementation, custom API and webhook integrations, and multi-system data synchronization.',
     services: [
       'CRM implementation and automated sales pipelines',
       'Custom API and webhook integrations',
       'Framer website integration with CRMs and automation platforms',
-      'Multi-system data synchronisation',
+      'Multi-system data synchronization',
       'E-commerce and web application infrastructure',
     ],
   },
@@ -80,7 +80,7 @@ export const hook = (c) => c.summary.split('. ')[0] + '.'
 
 export const AUDIENCES = {
   leaders: ['Founders', 'CEOs', 'Internal teams'],
-  organisations: ['Professional services firms', 'Creative agencies', 'Multi-disciplinary design and architecture studios', 'Property developers and real estate groups', 'Multi-brand holding groups', 'B2B consultancies'],
+  organizations: ['Professional services firms', 'Creative agencies', 'Multi-disciplinary design and architecture studios', 'Property developers and real estate groups', 'Multi-brand holding groups', 'B2B consultancies'],
 }
 
 /* Client systems work — scope as confirmed by Opus Eve (Nov 2026). Review before publishing. */
@@ -96,7 +96,7 @@ export const CLIENTS = [
 export const STEPS = [
   { title: 'Sense the pulse', text: 'Before systems, there is rhythm. We begin in the pre-moment, listening to the signals beneath your business.' },
   { title: 'Architect the framework', text: 'Ideas become intention. Intention becomes infrastructure. We translate complexity into clean, geometric systems.' },
-  { title: 'Ignite the system', text: 'This is where the Opus begins. The labour, the real work, the performance.' },
+  { title: 'Ignite the system', text: 'This is where the Opus begins. The labor, the real work, the performance.' },
 ]
 
 export const PRINCIPLES = [
@@ -118,34 +118,34 @@ export const ENGAGEMENT = [
   {
     phase: 'Audit',
     step: 'Sense the pulse',
-    text: 'An operations and tech stack audit: how work moves through your teams, which systems hold which data, where integrations break and where time is lost. It ends with a prioritised roadmap.',
+    text: 'An operations and tech stack audit: how work moves through your teams, which systems hold which data, where integrations break and where time is lost. It ends with a prioritized roadmap.',
   },
   {
     phase: 'Architect & build',
     step: 'Architect the framework',
-    text: 'System design and delivery in scoped phases, covering integrations, workflow automation, dashboards, custom internal tools and the organisational changes that make them stick.',
+    text: 'System design and delivery in scoped phases, covering integrations, workflow automation, dashboards, custom internal tools and the organizational changes that make them stick.',
   },
   {
     phase: 'Embed & evolve',
     step: 'Ignite the system',
-    text: 'Rollout, training and ongoing optimisation. Support can continue on a monthly retainer, with Opus Eve running, monitoring and extending your systems as you scale.',
+    text: 'Rollout, training and ongoing optimization. Support can continue on a monthly retainer, with Opus Eve running, monitoring and extending your systems as you scale.',
   },
 ]
 
 export const COST_DRIVERS = [
   'How many systems, tools and integrations are in scope',
-  'Data migration and multi-system synchronisation complexity',
+  'Data migration and multi-system synchronization complexity',
   'Configuring existing platforms versus building custom software',
   'The number of teams, brands or subsidiaries involved',
-  'The level of ongoing support and optimisation required',
+  'The level of ongoing support and optimization required',
 ]
 
 export const AUDIT_INCLUDES = [
   'Process maps of core workflows (sales, client onboarding, delivery and project handoffs)',
-  'A full tech stack inventory: tools, licences, overlaps and gaps',
+  'A full tech stack inventory: tools, licenses, overlaps and gaps',
   'An integration and data-flow map showing where information is re-keyed or lost',
   'Bottleneck, risk and ownership analysis across teams',
-  'A prioritised roadmap of quick wins, automation opportunities and build recommendations',
+  'A prioritized roadmap of quick wins, automation opportunities and build recommendations',
 ]
 
 /* FAQ — the FAQ page is the primary home for these answers (+ FAQPage schema, llms.txt).
@@ -161,12 +161,12 @@ export const FAQS = [
   {
     group: 'about-opus-eve',
     q: 'What does Opus Eve do?',
-    a: `${DEFINITION} Its five capabilities are business optimisation, organisation design, system creation, IT customisation, and strategy and scaling.`,
+    a: `${DEFINITION} Its five capabilities are business optimization, organization design, system creation, IT customization, and strategy and scaling.`,
   },
   {
     group: 'about-opus-eve',
     q: 'Who does Opus Eve work with?',
-    a: 'Opus Eve works with founders, CEOs and internal teams at B2B professional services firms, creative agencies, multi-disciplinary design and architecture studios, property developers and real estate groups, consultancies and multi-brand holding groups. These are organisations that are setting up, scaling up or cleaning up their operations.',
+    a: 'Opus Eve works with founders, CEOs and internal teams at B2B professional services firms, creative agencies, multi-disciplinary design and architecture studios, property developers and real estate groups, consultancies and multi-brand holding groups. These are organizations that are setting up, scaling up or cleaning up their operations.',
   },
   {
     group: 'about-opus-eve',
@@ -181,7 +181,7 @@ export const FAQS = [
   {
     group: 'working-with-us',
     q: 'What is included in an operations and tech stack audit?',
-    a: 'An Opus Eve audit maps how work moves through your teams, inventories your tech stack, traces where integrations break and data is re-keyed, and identifies bottlenecks and ownership gaps. It ends with a prioritised roadmap of quick wins, automation opportunities and build recommendations.',
+    a: 'An Opus Eve audit maps how work moves through your teams, inventories your tech stack, traces where integrations break and data is re-keyed, and identifies bottlenecks and ownership gaps. It ends with a prioritized roadmap of quick wins, automation opportunities and build recommendations.',
   },
   {
     group: 'working-with-us',
@@ -211,7 +211,7 @@ export const FAQS = [
   {
     group: 'scaling-operations',
     q: 'How should internal systems be structured to support scaling across multiple brand subsidiaries?',
-    a: 'Separate what should be shared from what should stay brand-specific. Shared services (finance, data, CRM, reporting and core infrastructure) sit on one backbone, while each brand keeps its own workflows and front-end tools. Clear ownership, synchronised data and group-level dashboards let a holding group scale without rebuilding for every new brand.',
+    a: 'Separate what should be shared from what should stay brand-specific. Shared services (finance, data, CRM, reporting and core infrastructure) sit on one backbone, while each brand keeps its own workflows and front-end tools. Clear ownership, synchronized data and group-level dashboards let a holding group scale without rebuilding for every new brand.',
   },
   {
     group: 'scaling-operations',
@@ -220,7 +220,7 @@ export const FAQS = [
   },
   {
     group: 'scaling-operations',
-    q: 'Why should organisations audit their operational tech stack before launching new products?',
+    q: 'Why should organizations audit their operational tech stack before launching new products?',
     a: 'A new product, brand or market multiplies whatever is already in your systems, good or broken. An audit before launch exposes overlapping tools, manual workarounds and data gaps while they are cheap to fix, so the launch runs on infrastructure that can carry the extra load.',
   },
   {

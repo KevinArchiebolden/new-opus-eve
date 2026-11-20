@@ -6,17 +6,18 @@ import { ParallaxImg, Reveal, SplitLines } from '../components/Reveal'
 import { ScrollWords } from '../components/Effects'
 import { NextSteps, RuleHead } from '../components/Layout'
 import { Engagement, ServicesDetail } from '../components/Answers'
+import { Approach } from '../components/Approach'
 import { PRINCIPLES, REGIONS, TRAITS } from '../data/site'
 import { breadcrumbs, graph, organization, webPage, website } from '../lib/schema'
 
 /* About = who Opus Eve is, what it believes, what it does in detail, how it engages, where it works.
-   Primary home for: brand story, the mark, philosophy, character, detailed services, engagement model, regions. */
+   Primary home for: brand story, the mark, philosophy, detailed services, character, how we work, engagement model, regions. */
 export default function About() {
   return (
     <main id="main">
       <Seo
         title="About Opus Eve | Services, Philosophy & How Engagements Work"
-        description="Who Opus Eve is and how it works: a strategy, operations and technology firm delivering operations and tech stack audits, organisational design, workflow automation, CRM and API integrations and custom internal systems. Member of the Oscurro Group."
+        description="Who Opus Eve is and how it works: a strategy, operations and technology firm delivering operations and tech stack audits, organizational design, workflow automation, CRM and API integrations and custom internal systems. Member of the Oscurro Group."
         image="ember-1024.jpg"
         jsonLd={graph(organization(), website(), webPage({ path: '/about', type: 'AboutPage', title: 'About Opus Eve', description: 'Who Opus Eve is, its services, philosophy and engagement model.' }), breadcrumbs([['Home', '/'], ['About', '/about']]))}
       />
@@ -51,8 +52,8 @@ export default function About() {
           <div className="grid">
             <SplitLines id="essence-title" className="display display--xl essence__title" lines={['Complexity', [['into clarity', 'outline']]]} />
             <div className="essence__copy">
-              <Reveal as="p" className="lead">Opus Eve is a strategy, operations and technology firm. We design, build, and manage the systems, strategies, and structures that help organisations scale with confidence and operate with purpose.</Reveal>
-              <Reveal as="p" className="body-copy" delay={0.08}>From growth strategy to organisational design to enterprise technology, we transform complexity into clarity, and then we execute.</Reveal>
+              <Reveal as="p" className="lead">Opus Eve is a strategy, operations and technology firm. We design, build, and manage the systems, strategies, and structures that help organizations scale with confidence and operate with purpose.</Reveal>
+              <Reveal as="p" className="body-copy" delay={0.08}>From growth strategy to organizational design to enterprise technology, we transform complexity into clarity, and then we execute.</Reveal>
             </div>
           </div>
         </div>
@@ -68,7 +69,7 @@ export default function About() {
           <div className="symbol__copy">
             <Reveal as="p" className="eyebrow">The mark</Reveal>
             <SplitLines id="symbol-title" className="display display--lg" lines={['Opus: the work.', [['Eve: the beginning.', 'accent-pink']]]} />
-            <Reveal as="p" className="body-copy" delay={0.1}>The logo is bold and angular, capturing the brand’s raw, structural energy. Its geometric “OE” monogram splits at the centre, symbolising tension, duality, and movement.</Reveal>
+            <Reveal as="p" className="body-copy" delay={0.1}>The logo is bold and angular, capturing the brand’s raw, structural energy. Its geometric “OE” monogram splits at the center, symbolizing tension, duality, and movement.</Reveal>
           </div>
         </div>
       </section>
@@ -107,22 +108,11 @@ export default function About() {
         </div>
       </section>
 
-      {/* 03 — character */}
-      <section className="section section--flush-top" aria-labelledby="traits-title">
-        <div className="wrap">
-          <RuleHead label="How we show up" num="03" />
-          <SplitLines id="traits-title" className="display display--xl section-title" lines={['We are']} />
-          <ul className="traits">
-            {TRAITS.map((t, i) => <Reveal as="li" key={t.name} delay={i * 0.06}><strong>{t.name}</strong><span>{t.text}</span></Reveal>)}
-          </ul>
-        </div>
-      </section>
-
-      {/* 04 — services in detail (primary home; Home links here per capability) */}
+      {/* 03 — services in detail (primary home; Home links here per capability) */}
       <section id="services" className="section approach approach--static" aria-labelledby="services-title">
         <div className="approach__bg" aria-hidden="true"><Img name="streak-cover" sizes="100vw" /></div>
         <div className="wrap">
-          <RuleHead label="What we do" num="04" />
+          <RuleHead label="What we do" num="03" />
           <div className="grid section-head">
             <SplitLines id="services-title" className="display display--xl" lines={['Why', 'Opus Eve']} />
             <Reveal as="p" className="body-copy section-head__aside">We align people, platforms, and processes for lasting impact. We design systems that scale, strategies that endure, and operations that perform under pressure.</Reveal>
@@ -131,10 +121,24 @@ export default function About() {
         </div>
       </section>
 
-      {/* 05 — engagement model */}
+      {/* 04 — character */}
+      <section className="section" aria-labelledby="traits-title">
+        <div className="wrap">
+          <RuleHead label="How we show up" num="04" />
+          <SplitLines id="traits-title" className="display display--xl section-title" lines={['We are']} />
+          <ul className="traits">
+            {TRAITS.map((t, i) => <Reveal as="li" key={t.name} delay={i * 0.06}><strong>{t.name}</strong><span>{t.text}</span></Reveal>)}
+          </ul>
+        </div>
+      </section>
+
+      {/* 05 — how we work (the rhythm behind every engagement; moved from Home) */}
+      <Approach num="05" />
+
+      {/* 06 — engagement model */}
       <section id="engagement" className="section" aria-labelledby="engage-title">
         <div className="wrap">
-          <RuleHead label="How engagements work" num="05" />
+          <RuleHead label="How engagements work" num="06" />
           <div className="grid section-head">
             <SplitLines id="engage-title" className="display display--xl" lines={['Audit.', 'Architect.', [['Ignite.', 'outline']]]} />
             <Reveal as="p" className="body-copy section-head__aside">Every engagement follows the same rhythm, from an operations and tech stack audit to systems that run inside your business.</Reveal>
@@ -143,10 +147,10 @@ export default function About() {
         </div>
       </section>
 
-      {/* 06 — regions */}
+      {/* 07 — regions */}
       <section className="section section--flush-top" aria-labelledby="where-title">
         <div className="wrap">
-          <RuleHead label="Where we work" num="06" />
+          <RuleHead label="Where we work" num="07" />
           <div className="grid section-head">
             <SplitLines id="where-title" className="display display--xl" lines={['Four regions.', [['One rhythm.', 'outline']]]} />
             <Reveal as="p" className="body-copy section-head__aside">Opus Eve is a member of the Oscurro Group, supporting founders, CEOs and internal teams across four regions.</Reveal>
