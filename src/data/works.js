@@ -1,6 +1,6 @@
 // All project content. One template (pages/WorkDetail.jsx) renders every entry.
 // `lines`: display title, one array item per line; a segment is a string or [text, className].
-// Each chapter follows one pattern: label, heading, a three-column `trio` block and an optional one-line close.
+// Each project has one chapter (label, heading, a three-column `trio` summarizing the project).
 // Sections render in order; supported keys: heading, paragraphs, list, block, quote.
 
 export const works = [
@@ -20,39 +20,14 @@ export const works = [
     intro: 'GlobeWest is a leading Australian design brand with a 20-year track record and a trade-first business model. The company set out to enter the United States to diversify revenue, build global brand visibility and prove that its model can scale in the world’s largest premium furniture market.',
     sections: [
       {
-        label: 'The brief',
-        heading: 'Not geographic growth for its own sake.',
+        label: 'The project',
+        heading: 'Clarity on where, how and when to enter.',
         block: { type: 'trio', items: [
-          { title: 'Diversify revenue', text: 'Reduce reliance on the domestic market by building a second engine of growth in the world’s largest premium furniture market.' },
-          { title: 'Build global visibility', text: 'Position GlobeWest as an emerging international design authority, not just a successful Australian brand.' },
-          { title: 'Prove the model scales', text: 'Validate the trade-first model in a competitive, design-led economy and create a replicable framework for future expansions.' },
-        ] },
-        paragraphs: ['The move was framed as a deliberate test of operational robustness, supply-chain agility and long-term international value creation.'],
-      },
-      {
-        label: 'The work',
-        heading: 'A framework for entry, and the plan to execute it.',
-        block: { type: 'trio', items: [
-          { title: 'Market entry framework', text: 'Opportunity size, competitive landscape, macroeconomic and regulatory conditions, duties, compliance and logistics, distilled into one clear view of the U.S. market.' },
-          { title: 'Validation and channels', text: 'Priority metros validated, with Los Angeles as the entry point, plus a recommended channel strategy, commercial framework and business case.' },
-          { title: 'Launch and implementation plan', text: 'The workstreams, sequencing, governance controls and staged investment needed to open a trade presence in Los Angeles.' },
-        ] },
-        paragraphs: ['The result: clarity on where, how and when to enter.'],
-      },
-      { quote: { text: 'The Australian contemporary, indoor–outdoor system brand for the trade.', cite: 'The recommended U.S. positioning' } },
-      {
-        label: 'Rollout and governance',
-        heading: 'Four metros. Investment linked to evidence.',
-        block: { type: 'trio', items: [
-          { title: 'A focused rollout', text: 'Rather than a diffuse national push, entry starts in Los Angeles as the brand and trade anchor, then extends to Dallas, Miami and Austin.' },
-          { title: 'Gated investment', text: 'Every step-change in spend is released through a Board decision gate, from mobilization to lease, opening and scale.' },
-          { title: 'Proof before scale', text: 'Each gate is backed by an evidence pack, so capital stays tied to demonstrated adoption and stable service, not optimism.' },
+          { title: 'The brief', text: 'Diversify revenue beyond Australia, establish GlobeWest as an international design authority and prove its trade-first model can scale in a competitive, design-led market, creating a framework that future expansions can repeat.' },
+          { title: 'The work', text: 'A market entry framework covering opportunity size, competitors, regulation, duties and logistics. Priority metros were validated, with Los Angeles as the entry point, and backed by a channel strategy, business case and a sequenced launch and implementation plan.' },
+          { title: 'Rollout & governance', text: 'A focused rollout from Los Angeles to Dallas, Miami and Austin. Every step-change in spend passes a Board decision gate backed by an evidence pack, so capital follows demonstrated adoption and stable service, not optimism.' },
         ] },
       },
-    ],
-    gallery: [
-      { img: 'streak-cover', layout: 'g-left', alt: 'Vertical streak gradient in black red, grunge pink and acid yellow', caption: 'Report design language, with streak gradients built from the Opus Eve palette.' },
-      { img: 'gradient-rose', layout: 'g-right', alt: 'Soft vertical gradient in grunge pink and black red' },
     ],
   },
   {
@@ -72,39 +47,14 @@ export const works = [
     intro: 'Strip away the jargon and the tools, and marketing comes down to one thing: a message. What you stand for, what you offer, why someone should care. MCOS is the system built to protect it.',
     sections: [
       {
-        label: 'The problem',
-        heading: 'Marketing has three problems nobody has solved.',
+        label: 'The project',
+        heading: 'One system to protect the message.',
         block: { type: 'trio', items: [
-          { title: 'The message is inconsistent', text: 'Your website says it one way. Your Instagram says it slightly differently. Your newsletter uses different language again. Once the message drifts, it keeps drifting, because there is nothing in place to catch it.' },
-          { title: 'You don’t know where you stand', text: 'Competitors are publishing, shifting their messaging, pushing into new topics. Most businesses have no systematic way of knowing where they stand relative to what everyone else is saying.' },
-          { title: 'You don’t know what is working', text: 'Ask which piece of marketing led to which sale, and nobody can tell you. The data lives in separate dashboards that don’t talk to each other, so every conclusion is a guess.' },
-        ] },
-        paragraphs: ['These are not three separate problems. They are three symptoms of the same missing system.'],
-      },
-      {
-        label: 'The gap',
-        heading: 'More content, faster, with less consistency than ever.',
-        block: { type: 'trio', items: [
-          { title: 'Content in isolation', text: 'Hundreds of AI tools now write captions, blog posts, subject lines and ad copy. None of them know what the others are saying.' },
-          { title: 'No brand context', text: 'None have access to your brand guidelines, your tone of voice or what you posted yesterday.' },
-          { title: 'No intelligence layer', text: 'AI gave everyone a content engine. Nobody got quality control, market intelligence or a way to know what is actually working.' },
+          { title: 'The problem', text: 'The message drifts from channel to channel, businesses can’t see where they stand against competitors, and nobody can say which marketing led to which sale. These are three symptoms of the same missing system.' },
+          { title: 'The gap', text: 'AI tools now produce content faster than ever, but in isolation: no brand guidelines, no memory of what went out yesterday, and no quality control, market intelligence or way to know what is working.' },
+          { title: 'The system', text: 'MCOS monitors the brand across every channel to catch inconsistencies before they go live, reads competitors to show where you stand, and links activity to revenue, in a continuous loop: listen, create, check, publish, measure, learn.' },
         ] },
       },
-      { quote: { text: 'AI made content creation easy. Nobody made marketing intelligent.', cite: 'The gap MCOS is built to close' } },
-      {
-        label: 'The system',
-        heading: 'At its core, MCOS is a monitor.',
-        block: { type: 'trio', items: [
-          { title: 'Enforces consistency', text: 'It watches your brand across every channel and catches inconsistencies before they go live.' },
-          { title: 'Reads the market', text: 'It watches your competitors, shows where you stand and recommends how to respond.' },
-          { title: 'Connects to revenue', text: 'It watches your results and links marketing activity to the outcomes it drives.' },
-        ] },
-        paragraphs: ['One system, running as a continuous loop: listen, create, check, publish, measure, learn.'],
-      },
-    ],
-    gallery: [
-      { img: 'glow-red', layout: 'g-left', alt: 'A red glow emerging from a scratched dark surface' },
-      { img: 'glass-oe', layout: 'g-right', alt: 'The Opus Eve monogram seen through fluted glass' },
     ],
   },
   {
@@ -124,35 +74,15 @@ export const works = [
     intro: 'Software made it faster to draw the lines, not to figure out where the lines should go. This platform turns floor plan design from a slow, manual, expensive process into something fast, scalable and reliable.',
     sections: [
       {
-        label: 'The problem',
-        heading: 'Designing a home is still done by hand.',
-        block: { type: 'trio', items: [
-          { title: 'Creative time is lost', text: 'Architects spend most of their time arranging rooms, checking dimensions and confirming code compliance, not designing.' },
-          { title: 'Architecture cannot scale', text: 'To design more homes, a firm has one option: hire more architects. Output is bottlenecked by human time.' },
-          { title: 'Homebuyers have almost no say', text: 'Pick from a handful of pre-designed layouts, or commission a custom design that costs months and tens of thousands of dollars.' },
-        ] },
-      },
-      {
-        label: 'The insight',
-        heading: 'Architecture is a system of building blocks.',
-        block: { type: 'trio', items: [
-          { title: 'The same components', text: 'Every home, however custom, is made of the same parts: kitchens, bedrooms, bathrooms, living rooms, garages, hallways and staircases.' },
-          { title: 'Every component has rules', text: 'A kitchen needs plumbing. A bedroom needs an egress window. A bathroom cannot open directly into a kitchen.' },
-          { title: 'The rules live in people’s heads', text: 'Architects apply them manually, every time. When they get it wrong, it costs weeks of revisions.' },
-        ] },
-      },
-      { quote: { text: 'AI made it easy to generate a picture of a floor plan. Not one that can be built.', cite: 'Why rules come first' } },
-      {
-        label: 'The system',
+        label: 'The project',
         heading: 'Rules first. AI second.',
         block: { type: 'trio', items: [
-          { title: 'Packets', text: 'Pre-designed, pre-validated room components that already know their own size, adjacency and code requirements.' },
-          { title: 'Real-time validation', text: 'Every connection is checked as packets are assembled into a floor plan.' },
-          { title: 'AI-generated layouts', text: 'AI generates options on top of the rule system, so every one is buildable and ready for BIM workflows, including Revit.' },
+          { title: 'The problem', text: 'Architects spend most of their time arranging rooms and checking code compliance, not designing. Firms can only grow by hiring, and homebuyers choose between a few stock layouts or a custom design that takes months and costs tens of thousands.' },
+          { title: 'The insight', text: 'Every home is built from the same components, from kitchens and bedrooms to hallways and stairs, and each one has rules. Today those rules live in architects’ heads and are applied by hand, so mistakes cost weeks of revisions.' },
+          { title: 'The system', text: 'Pre-validated room components, called packets, that know their own size, adjacency and code requirements. Every connection is checked in real time, and AI generates layouts on top of the rules, so each option is buildable and ready for BIM workflows, including Revit.' },
         ] },
       },
     ],
-    gallery: [{ img: 'fluted-chrome', layout: 'g-wide', alt: 'Chrome and glass fins catching light in a repeating rhythm' }],
   },
 ]
 
