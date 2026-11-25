@@ -59,55 +59,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* the mark (the name itself is introduced on Home) */}
-      <section className="section section--flush-top" aria-labelledby="symbol-title">
-        <div className="wrap symbol">
-          <figure className="symbol__media">
-            <ParallaxImg name="logo-sketch" alt="Pencil sketches exploring the angular OE monogram" sizes="(min-width: 900px) 45vw, 100vw" ratio="4 / 3" amount={4} className="media--paper" />
-            <Reveal as="figcaption" className="caption">Early sketches of the OE monogram, work in preparation.</Reveal>
-          </figure>
-          <div className="symbol__copy">
-            <Reveal as="p" className="eyebrow">The mark</Reveal>
-            <SplitLines id="symbol-title" className="display display--lg" lines={['Opus: the work.', [['Eve: the beginning.', 'accent-pink']]]} />
-            <Reveal as="p" className="body-copy" delay={0.1}>The logo is bold and angular, capturing the brand’s raw, structural energy. Its geometric “OE” monogram splits at the center, symbolizing tension, duality, and movement.</Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* 02 — philosophy */}
-      <section className="section section--flush-top" aria-labelledby="embrace-title">
-        <div className="wrap">
-          <RuleHead label="Philosophy" num="02" />
-          <div className="embrace">
-            <SplitLines id="embrace-title" className="display display--lg embrace__label" lines={['We embrace']} />
-            {/* The scroll trigger sits on the <li> (never clipped). Triggering on the line itself
-                failed in some browsers: it starts fully hidden inside its overflow mask, so
-                IntersectionObserver never reports it entering view and only the dividers showed. */}
-            <motion.ul className="embrace__list" initial="hidden" whileInView="show" viewport={viewportOnce}
-              variants={{ hidden: {}, show: { transition: { staggerChildren: 0.1 } } }}>
-              {[['Precision', 'adaptability'], ['Structure', 'creativity'], ['Stability', 'momentum']].map(([a, b]) => (
-                <li key={a}>
-                  <span className="line-mask">
-                    <motion.span className="line-inner" variants={{ hidden: { y: '110%' }, show: { y: '0%', transition: { duration: 1.1, ease: EASE } } }}>
-                      {a} <span className="with">with</span> {b}
-                    </motion.span>
-                  </span>
-                </li>
-              ))}
-            </motion.ul>
-          </div>
-          <div className="principles principles--spaced">
-            {PRINCIPLES.map((p, i) => (
-              <Reveal as="article" className="principle" key={p.title} delay={i * 0.1} y={60}>
-                <div className="principle__bg" aria-hidden="true"><Img name={p.img} sizes="(min-width: 900px) 33vw, 100vw" /></div>
-                <span className="num">{['I', 'II', 'III'][i]}</span>
-                <div><h3 className="display display--lg">{p.title}</h3><p>{p.text}</p></div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
+     
       {/* 03 — services in detail (primary home; Home links here per capability) */}
       <section id="services" className="section approach approach--static" aria-labelledby="services-title">
         <div className="approach__bg" aria-hidden="true"><Img name="streak-cover" sizes="100vw" /></div>
